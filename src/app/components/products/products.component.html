@@ -1,0 +1,19 @@
+<div class="row mb-5">
+    <div class="col-12 col-md-6" *ngFor="let product of productList">
+        <div class="product-inner">
+            <div class="image-part">
+                <span class="img-new"><img [src]="product.imageURL" [alt]="product.imageCap" class="img-fluid"></span>
+                <h2>{{product.imageCap | uppercase}}</h2>
+                <div class="price-area" *ngIf="product.price !== null">
+                    <button type="button" class="buy-button">{{product.buyNow}}</button>
+                    <h3>{{product.price}}</h3>
+                </div>
+            </div>
+            <div class="content-part">
+                <h4>{{product.mainHeading}}</h4>
+                <h6>{{product.subHeading}}</h6>
+                <p>{{product.content}}</p>
+            </div>
+        </div>
+    </div>
+</div>
